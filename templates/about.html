@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIKUTAVISUALS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <style>
+        .dynamic-bg {
+            transition: background-image 1.2s ease-in-out;
+        }
+    </style>
+</head>
+<body id="bg-container" class="dynamic-bg text-zinc-100 font-sans min-h-screen flex flex-col justify-between bg-zinc-950 bg-cover bg-center bg-no-repeat bg-fixed bg-blend-overlay relative overflow-x-hidden" 
+      style="background-image: linear-gradient(to bottom, rgba(24, 24, 27, 0.15), rgba(24, 24, 27, 0.35)), url('{{ url_for('static', filename='IMG_1295.JPG') }}');">
+
+    <div class="fixed inset-0 pointer-events-none z-20 p-6 flex flex-col justify-between border border-white/5 font-mono text-[9px] tracking-widest text-white/30">
+        <div class="flex justify-between items-start">
+            <div>[REC] 4K 60FPS</div>
+            <div>ISO 400</div>
+        </div>
+        <div class="flex justify-between items-end">
+            <div id="hud-coords">X: 000 // Y: 000</div>
+            <div>MF // BIKUTA_SYS_v2.6</div>
+        </div>
+    </div>
+
+    <nav class="animate__animated animate__fadeInDown border-b border-zinc-800/40 px-6 py-4 flex justify-between items-center bg-zinc-950/70 backdrop-blur-md sticky top-0 z-50">
+        <h1 class="text-xl font-bold tracking-widest text-white drop-shadow-md">BIKUTAVISUALS</h1>
+        <div class="space-x-6 text-sm font-medium tracking-wide">
+            <a href="/" class="text-white border-b-2 border-white pb-1">About</a>
+            <a href="/book" class="text-zinc-200 hover:text-white transition drop-shadow">Book a Session</a>
+            <a href="/admin/bookings" class="text-zinc-400 hover:text-white transition drop-shadow">Admin Portal</a>
+        </div>
+    </nav>
+
+    <main class="max-w-4xl mx-auto px-6 py-20 text-center my-auto z-10 w-full relative">
+        <div class="animate__animated animate__fadeInUp">
+            <p class="text-xs uppercase tracking-widest text-zinc-200 mb-3 font-bold drop-shadow-md">Fine Art Photography</p>
+            <h2 class="text-5xl font-extrabold tracking-tight text-white mb-6 sm:text-6xl [text-shadow:_0_4px_12px_rgba(0,0,0,0.9)]">
+                Capturing life's raw, authentic stories.
+            </h2>
+            <p class="text-lg text-white font-semibold max-w-xl mx-auto mb-10 leading-relaxed [text-shadow:_0_2px_8px_rgba(0,0,0,0.9)]">
+                Hi, I'm the lead photographer at BIKUTAVISUALS. I specialize in timeless portraits, intimate weddings, and commercial events. Let's make something unforgettable together.
+            </p>
+            
+            <a href="/book" class="inline-block bg-white text-zinc-950 font-bold px-8 py-4 rounded-full shadow-2xl hover:bg-zinc-200 transition duration-300 transform hover:-translate-y-1 hover:scale-105 mb-12">
+                Book Your Session
+            </a>
+        </div>
+
+        <div class="flex justify-center mb-24 animate__animated animate__fadeInUp animate__delay-1s">
+            <div class="w-32 h-32 bg-zinc-950/90 border border-zinc-800 rounded-full flex items-center justify-center space-x-4 shadow-2xl relative">
+                <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center relative overflow-hidden">
+                    <div class="eye-pupil w-4 h-4 bg-zinc-950 rounded-full absolute transition-all duration-75"></div>
+                </div>
+                <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center relative overflow-hidden">
+                    <div class="eye-pupil w-4 h-4 bg-zinc-950 rounded-full absolute transition-all duration-75"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="animate__animated animate__fadeInUp animate__delay-1s mt-20 text-left relative z-10 mb-20">
+            <h3 class="text-xs uppercase tracking-widest text-zinc-200 mb-8 font-bold drop-shadow-md">Capabilities & Services</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-gradient-to-br from-white/10 to-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-md shadow-xl hover:border-white/20 transition-all duration-300">
+                    <div class="flex items-start space-x-4">
+                        <div class="text-white/40 font-mono text-xs mt-1">01//</div>
+                        <div>
+                            <h4 class="text-base font-bold text-white mb-2 tracking-tight">Commercial Production</h4>
+                            <p class="text-xs text-zinc-300/90 leading-relaxed font-medium">Full-scale cinematic pipeline execution from initial scriptwriting and production storyboarding to professional set lighting, direction, and high-end post-production color grading.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-white/10 to-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-md shadow-xl hover:border-white/20 transition-all duration-300">
+                    <div class="flex items-start space-x-4">
+                        <div class="text-white/40 font-mono text-xs mt-1">02//</div>
+                        <div>
+                            <h4 class="text-base font-bold text-white mb-2 tracking-tight">Photography</h4>
+                            <p class="text-xs text-zinc-300/90 leading-relaxed font-medium">High-fidelity editorial, commercial product, and atmospheric lifestyle photography built around premium studio illumination to highlight texture, detail, and tone.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-white/10 to-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-md shadow-xl hover:border-white/20 transition-all duration-300">
+                    <div class="flex items-start space-x-4">
+                        <div class="text-white/40 font-mono text-xs mt-1">03//</div>
+                        <div>
+                            <h4 class="text-base font-bold text-white mb-2 tracking-tight">Brand Strategy</h4>
+                            <p class="text-xs text-zinc-300/90 leading-relaxed font-medium">Deep identity positioning, competitor landscape analytics, target audience psychology mapping, and foundational messaging frameworks tailored for long-term growth.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-white/10 to-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-md shadow-xl hover:border-white/20 transition-all duration-300">
+                    <div class="flex items-start space-x-4">
+                        <div class="text-white/40 font-mono text-xs mt-1">04//</div>
+                        <div>
+                            <h4 class="text-base font-bold text-white mb-2 tracking-tight">Creative Direction</h4>
+                            <p class="text-xs text-zinc-300/90 leading-relaxed font-medium">Unified visual oversight managing the bridge between raw corporate goals and aesthetic outputs across lookbooks, interactive media assets, and digital rollouts.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class
